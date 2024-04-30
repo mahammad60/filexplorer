@@ -1,0 +1,19 @@
+with open("highscore", "a+")as f:
+  print("HIGH SCORE TABLE")
+  user = input("input your initals \n")
+  f.write(user+"\n")
+  scores = input("input your score out of 100k \n")
+  f.write(scores+"\n")
+  print("added to high score table.")
+  while True:
+    another = input("add another? y/n  \n").lower()
+    f.write(another+"\n")
+    if another == "y":
+        user = input("input your initals \n")
+        scores = input("input your score out of 100k \n")
+        f.write(user)
+        f.write(scores+"\n")
+    elif another == "n":
+       print("thank you for playing.")
+       break
+
